@@ -59,10 +59,7 @@ public class Invasor extends Personaje {
 	public void setCont(int cont) {
 		this.cont = cont;
 	}
-	public void splice(int j) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 
 }
