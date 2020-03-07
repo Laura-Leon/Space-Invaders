@@ -1,18 +1,21 @@
 package Model;
 
 import java.util.ArrayList;
+import static processing.core.PConstants.ENTER;
+import static processing.core.PConstants.LEFT;
+import static processing.core.PConstants.RIGHT;
 
 
 import processing.core.PApplet;
+import Model.Bala;
 
 public class Heroe {
-	private static final int RIGHT = 0;
-	private static final int LEFT = 0;
-	private static final int ENTER = 0;
+	
 	int posX;
 	int posY;
 	int vel; 
 	PApplet app;
+	int vida;
 	
 	ArrayList<Bala> balas;
 	public Heroe(int posX,int posY,PApplet app) {
@@ -22,6 +25,8 @@ public class Heroe {
 		this.app= app;
 		balas = new ArrayList<>();
 		
+		this.vida = 3;
+		
 		
 		
 	}
@@ -29,6 +34,9 @@ public class Heroe {
 	public void pintar() {
 		app.fill(180,50,50);
 		app.rect(this.posX,this.posY,50,30);
+		for (int i = 0; i < balas.size(); i++) {
+			balas.get(i).pintar();
+		}
 	}
 	public void moverDer() {
 		if(this.posX<650) {
@@ -39,9 +47,9 @@ public class Heroe {
 		
 	}
 	public void moverIzq() {
-		if(this.posX>0) {
-			this.posX-=this.vel;
-		}else {this.posX -=650;
+		if(this.posX<0) {
+			this.posX-=0;
+		}else {this.posX -=this.vel;
 		}
 		
 	}
@@ -49,13 +57,7 @@ public class Heroe {
 	
 	// Misiles
 
-		public void setBalas(ArrayList<Bala> Balas) {
-			this.balas = balas;
-		}
-
-		public ArrayList<Bala> getBalas() {
-			return balas;
-		}
+	
 
 	
 	public void disparar() {
@@ -68,13 +70,29 @@ public class Heroe {
 			
 		}
 		if(app.keyCode==LEFT) {
-			moverDer();
+			moverIzq();
 		}
 		if(app.keyCode==ENTER) {
-			moverDer();
+			disparar();
 		}
 		
 		
+	}
+	public void setBalas(ArrayList<Bala> Balas) {
+		this.balas = balas;
+	}
+
+	public ArrayList<Bala> getBalas() {
+		return balas;
+	}
+	
+
+	public int getVida() {
+		return vida;
+	}
+
+	public void setVida(int vida) {
+		this.vida = vida;
 	}
 
 	public int getPosX() {

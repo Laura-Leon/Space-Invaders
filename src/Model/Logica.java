@@ -12,7 +12,7 @@ public class Logica {
 		this.app = app;
 		h = new Heroe(500, 400, app);
 		
-		invasor = new ArrayList();
+		invasor = new ArrayList<Invasor>();
 		for (int i = 0; i < 10; i++) {
 			invasor.add(new Invasor(app.height / 2, 60 + (120) * i, app));
 
