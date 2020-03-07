@@ -21,7 +21,7 @@ public class Juego {
 		 
 		 
 		 for(int i= 0;i<12;i++) {
-			 invasor.add(new Invasor(70*i,50,app));
+			 invasor.add(new Invasor(80*i,50,app));
 			 
 		 }
 	}
@@ -49,8 +49,8 @@ public class Juego {
 
 			 for (int i = 0; i < h.getBalas().size(); i++) {
 					for (int j = 0; j < invasor.size(); j++) {
-						if(PApplet.dist(h.getBalas().get(i).getPosX(), h.getBalas().get(i).getPosY(), invasor.get(j).getPosX()+25,
-							invasor.get(j).getPosY())<25) {
+						if(PApplet.dist(h.getBalas().get(i).getPosX(), h.getBalas().get(i).getPosY(), invasor.get(j).getPosX()+50,
+							invasor.get(j).getPosY())<50) {
 							
 							invasor.remove(j);
 							

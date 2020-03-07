@@ -17,10 +17,10 @@ public class Screenview2 {
 		controlador.iniciar();
 	}
 	public void inicioTecla() {
-		controlador.tecla();
+		controlador.key();
 	}
 	public void inicioRaton() {
-		controlador.raton();
+		controlador.mouse();
 	}
 	
 

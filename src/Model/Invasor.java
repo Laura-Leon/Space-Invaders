@@ -33,9 +33,9 @@ public class Invasor {
 		} else {
 			posX++;
 		}
-		if (cont >= 650) {
+		if (cont >= 120) {
 			cont = 0;
-			posY+=15;
+			posY+=50;
 			
 		}
 	}
@@ -63,6 +63,11 @@ public class Invasor {
 	public void setCont(int cont) {
 		this.cont = cont;
 	}
+	public void splice(int j) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 
 }
 

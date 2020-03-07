@@ -9,27 +9,21 @@ import static processing.core.PConstants.RIGHT;
 import processing.core.PApplet;
 import Model.Bala;
 
-public class Heroe {
-	
-	int posX;
-	int posY;
-	int vel; 
-	PApplet app;
-	int vida;
+public class Heroe extends Personaje {
 	
 	ArrayList<Bala> balas;
 	public Heroe(int posX,int posY,PApplet app) {
-		this.posX=posX;
-		this.posY= posY;
-		this.vel=6;
-		this.app= app;
+		super(posX,posY,app);
+	
+		
 		balas = new ArrayList<>();
 		
-		this.vida = 3;
+	//	this.vida = 3;
+}
 		
 		
 		
-	}
+	
 	
 	public void pintar() {
 		app.fill(180,50,50);
@@ -53,13 +47,7 @@ public class Heroe {
 		}
 		
 	}
-	
-	
-	// Misiles
 
-	
-
-	
 	public void disparar() {
 		Bala b = new Bala(this.posX+25,this.posY-20,app);
 		balas.add(b);
@@ -87,13 +75,7 @@ public class Heroe {
 	}
 	
 
-	public int getVida() {
-		return vida;
-	}
-
-	public void setVida(int vida) {
-		this.vida = vida;
-	}
+	
 
 	public int getPosX() {
 		return posX;

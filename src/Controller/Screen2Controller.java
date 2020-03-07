@@ -5,23 +5,23 @@ import processing.core.PApplet;
 
 public class Screen2Controller {
 	PApplet app;
-	Juego logicaJuego;
+	Juego logica;
 
 	public Screen2Controller(PApplet app) {
 		this.app = app;
-		this.logicaJuego = new Juego(app);
+		this.logica = new Juego(app);
 	}
 
 	public void iniciar() {
-		logicaJuego.ejecutar();
+		logica.ejecutar();
 	}
 
-	public void tecla() {
-		logicaJuego.key();
+	public void key() {
+		logica.key();
 	}
 
-	public void raton() {
-		logicaJuego.mouse();
+	public void mouse() {
+		logica.mouse();
 	}
 
 }
