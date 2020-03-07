@@ -2,19 +2,15 @@ package Model;
 
 import processing.core.PApplet;
 
-public class Invasor {
-	int posX;
-	int posY; 
-
-	PApplet app; 
+public class Invasor extends Personaje {
+	 
 	int cont;
 	
 	
 	
 	public Invasor(int posX,int posY,PApplet app) {
-		this.posX=posX;
-		this.posY=posY;
-		this.app = app;
+		super(posX,posY,app);
+	
 		cont = 0;
 	}
 	public void pintar() {

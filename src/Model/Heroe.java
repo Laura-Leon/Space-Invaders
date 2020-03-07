@@ -18,7 +18,7 @@ public class Heroe extends Personaje {
 		
 		balas = new ArrayList<>();
 		
-	//	this.vida = 3;
+	
 }
 		
 		
